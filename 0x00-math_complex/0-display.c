@@ -1,3 +1,8 @@
+/**
+ * display_complex_number - Display complex number
+ * @c: Complex number
+ */
+
 #include "main.h"
 
 /**
