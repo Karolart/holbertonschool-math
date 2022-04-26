@@ -1,14 +1,10 @@
-/**
- * display_complex_number - Display complex number
- * @c: Complex number
- */
-
 #include "main.h"
 
+
 /**
  * display_complex_number - Display complex number
  * @c: Complex number
- */
+*/
 
 void display_complex_number(complex c)
 {
