@@ -1,32 +1,31 @@
 #include "main.h"
 
 /**
- * display_complex_number - Display complex number
- * @c: Complex number
+ * display_complex_number - Prints the representation of a complex number
+ *
+ * @c: complex number
+ * Return: Void
  */
+
 
 void display_complex_number(complex c)
 {
-  if (c.re == 0)
+  printf("%.9g", c.re);
+  if (c.im)
     {
-      if (c.im < 0)
-	printf("- %.9gi\n", c.im * (-1));
-      else if (c.im == 0)
-	printf("0\n");
+      if (c.im > 0)
+	{
+	  printf(" + ");
+	}
       else
-	printf("%.9gi\n", c.im);
+	{
+	  printf(" - ");
+	  c.im *= -1;
+	}
+      if (c.im != 1 && c.im != -1)
+	printf("%.9g", c.im);
+      printf("i");
     }
-  else
-    {
-      if (c.im < -1)
-	printf("%.9g - %.9gi\n", c.re, c.im * (-1));
-      else if (c.im == -1)
-	printf("%.9g - i\n", c.re);
-      else if (c.im == 0)
-	printf("%.9g\n", c.re);
-      else if (c.im == 1)
-	printf("%.9g + i\n", c.re);
-      else
-	printf("%.9g + %.9gi\n", c.re, c.im);
-    }
+  printf("\n");
 }
+
