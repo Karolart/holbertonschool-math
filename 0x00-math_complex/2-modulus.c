@@ -14,5 +14,3 @@
 	modulo = sqrt(pow(c.re, 2) + pow(c.im, 2));
 	return (modulo);
 }
-
- 
