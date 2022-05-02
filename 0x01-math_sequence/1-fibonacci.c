@@ -2,9 +2,9 @@
 /**
  * Fibonnaci - function return a pointer with the head of
  * the fibonacci linked list
- *
  * Return:the head
  */
+
 t_cell *Fibonnaci()
 {
     t_cell *new, *head;
@@ -36,6 +36,7 @@ t_cell *Fibonnaci()
 
     return (head);
 }
+
 /**
  * gold_number -Returns a Golden Ratio
  *
