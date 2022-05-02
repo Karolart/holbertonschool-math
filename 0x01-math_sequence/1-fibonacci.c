@@ -2,9 +2,9 @@
 /**
  * Fibonnaci - function return a pointer with the head of
  * the fibonacci linked list
- * Return:the head
+ *
+ * Return: fibonacci linked list head
  */
-
 t_cell *Fibonnaci()
 {
     t_cell *new, *head;
@@ -14,6 +14,7 @@ t_cell *Fibonnaci()
  
     while (x2 != x1)
     {
+        /* Giving size to new */
         new = malloc(sizeof(t_cell));
         if (new == NULL)
         {
@@ -22,27 +23,28 @@ t_cell *Fibonnaci()
         new->elt = n2;
         new->next = head;
         head = new;
-  
+        /* Getting the value of the geometric reason
         of the elements f(n) y f(n-1) */
         if (n1 != 0)
         {
                 x1 = n1 / (n2 - n1);
                 x2 = n2 / n1;
         }
-        
+      
         n2 += n1;
         n1 = n2 - n1;
     }
 
     return (head);
 }
-
 /**
- * gold_number -Returns a Golden Ratio
+ * gold_number - Function that Return the Golden Ratio
+ * of the fibonacci serie
  *
- * @head: head pointer Parameter for the fibonacci
+ * @head: Parameter pointer to the head of the fibonacci
  * linked list
- * Return: Return the Golden Ratio 
+ *
+ * Return: Return the Golden Ratio of the fibonacci serie
  */
 double gold_number(t_cell *head)
 {
