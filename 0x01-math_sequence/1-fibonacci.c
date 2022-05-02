@@ -14,7 +14,6 @@ t_cell *Fibonnaci()
  
     while (x2 != x1)
     {
-        /* Giving size to new */
         new = malloc(sizeof(t_cell));
         if (new == NULL)
         {
@@ -23,8 +22,7 @@ t_cell *Fibonnaci()
         new->elt = n2;
         new->next = head;
         head = new;
-        /* Getting the value of the geometric reason
-        of the elements f(n) y f(n-1) */
+
         if (n1 != 0)
         {
                 x1 = n1 / (n2 - n1);
