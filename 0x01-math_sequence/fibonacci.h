@@ -12,12 +12,13 @@
 * @next: pointer
 */
 
-typedef struct t_cell
+typedef struct cell
 {
-int elt;
-struct t_cell *next;
+	int elt;
+	struct cell *next;
 } t_cell;
 
+/* Prototypes */
 t_cell *Fibonnaci();
 double gold_number(t_cell *head);
 
